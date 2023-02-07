@@ -38,6 +38,7 @@ async function controllerGetOneLocation(req, res, next) {
 router.get("/:id", controllerGetOneLocation);
 
 async function controllerUpdateOneLocation(req, res, next) {
+  console.log("hey")
   try {
     const location = await locationsService.updateOne(req.params.id, req.body);
     return res.status(200).send(location);
